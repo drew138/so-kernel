@@ -2,6 +2,7 @@
 const socketClient = require('socket.io-client');
 const fs = require('fs');
 const { exit } = require('process');
+const process = require('process');
 
 
 const socket = socketClient('http://localhost:8000')
@@ -12,6 +13,11 @@ const cwd = '/home/drew/projects/kernel/gestorArchivos/'
 socket.on('disconnect',()=>{
     exit();
 })
+
+setTimeout(function() {
+    socket.emit('crear_proceso', { nombre: 'Gestor de Archivos', PID: process.pid });
+}, 20000)
+
 
 socket.on('crear_carpeta', (carpeta) => {
     if (!fs.existsSync(cwd + carpeta)) {

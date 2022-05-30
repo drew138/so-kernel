@@ -63,11 +63,17 @@ const App= ({ socket })=> {
       }
     })
 
+    socket.on('crear_proceso', (data) => {
+      setProcesos(procesos => procesos.concat(data));
+    })
+
     // socket.on('connect_error', ()=>{
     //   setTimeout(()=>socket.connect(), 5000)
     // })
   //  socket.on('time', (data)=>setTime(data))
-   socket.on('disconnect',()=>setDisconnected(true))
+   socket.on('disconnect',()=>{
+    setDisconnected(true)
+  })
  
     // setInterval(()=>{
     //     socket.emit("time", new Date())
