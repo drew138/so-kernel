@@ -63,8 +63,14 @@ const App= ({ socket })=> {
       }
     })
 
+
     socket.on('crear_proceso', (data) => {
       setProcesos(procesos => procesos.concat(data));
+
+      setTransacciones(transacciones => transacciones.concat(`Proceso ${data.nombre} creado correctamente`))
+    })
+    socket.on('error_proceso', (data) => {
+      setTransacciones(transacciones => transacciones.concat(data.error))
     })
 
     // socket.on('connect_error', ()=>{

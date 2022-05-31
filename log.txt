@@ -1,0 +1,15 @@
+Kernel iniciado correctamente
+Kernel iniciado correctamenteGestor de Procesos iniciado correctamente
+Cliente iniciado correctamente
+Error al iniciar proceso Gestor de Archivos
+Nvim iniciado correctamente
+Kernel iniciado correctamente
+Kernel iniciado correctamenteGestor de Procesos iniciado correctamente
+Cliente iniciado correctamente
+Error al iniciar proceso Nvim
+Error al iniciar proceso Gestor de Archivos
+Kernel iniciado correctamente
+Kernel iniciado correctamenteGestor de Procesos iniciado correctamente
+Cliente iniciado correctamente
+Error al iniciar proceso Gestor de Archivos
+Nvim iniciado correctamente
